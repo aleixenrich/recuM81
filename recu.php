@@ -25,44 +25,4 @@ $result = $conn->query($sql);
 
 // num_rows ia va per defecte dins de la variable num_rows
 
-if ($result->num_rows > 0 )  
-	{ 
-		
-	$row = $result->fetch_assoc();
-
-	$nomusuari = $row["nom"];
-	$contra_db = $row["contrasenya"];
-	$tipus = $row["tipus"];
-	;
-	if(passEntra == $contra_db){
-		
-		if($row["Tipus"]=="alumnat"){
-			header("Location:dashboard.html");
-			die();
-			}
-
-		else{
-		header("Location:dashboard.html");
-		die();
-		}
-		
-	}
-
-else{
-    header("Location:index.html");
-    die();
-	}
-
-else{
-	header("Location: iniciProfesosorat.html")
-	die();
-}
-
-else{
-	header("Location: index.html")
-	die();
-}
-    
-$donn->close();
-
 ?>
